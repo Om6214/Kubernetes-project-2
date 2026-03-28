@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: auth-config
+  namespace: event
+data:
+  NODE_ENV: "production"
+  PORT: "3001"
+  MONGO_DATABASE: "event_auth_db"
+  EVENT_SERVICE_URL: "http://event-svc:3002"
+  BOOKING_SERVICE_URL: "http://booking-svc:3003"
+  JWT_EXPIRES_IN: "24h"

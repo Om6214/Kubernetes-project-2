@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: booking-config
+  namespace: event
+data:
+  NODE_ENV: "production"
+  PORT: "3003"
+  MONGO_DATABASE: "event_bookings_db"
+  # REQUIRED by booking-service AppConfig.validate()
+  EVENT_SERVICE_URL: "http://event-svc:3002"
+  AUTH_SERVICE_URL: "http://auth-svc:3001"
